@@ -5,30 +5,49 @@
 #ifndef LIDARCLOUD_H
 #define LIDARCLOUD_H
 
-#include <exception>
+#include <stdexcept>
 #include "LIDARPoint.h"
+#include <ctime>
 
 namespace DSLib {
     class LIDARCloud {
     private:
-        const int   stdSize   = 300;
-        const int   voxelSize = 5;
-        LIDARPoint* ptrArray  = new LIDARPoint[(stdSize / voxelSize) * (stdSize / voxelSize) * (stdSize / voxelSize)]();
+        int cloudSize;
+        int voxelSize;
+        int standardisedCloudSize;
+
+        LIDARPoint* ptrArray;
+        int arraySize;
 
         // PRIVATE FUNCTION MEMBER(S):
-        int index(int x, int y, int z);
-
+        inline size_t index(int x, int y, int z);
+        inline int getCurrentTimeInSeconds();
+        inline int standardiseOrdinate(const float ordinate);
     public:
         // CONSTRUCTOR(S) AND DESTRUCTOR(S):
         LIDARCloud();
         ~LIDARCloud();
 
         // PUBLIC FUNCTION MEMBER(S):
-        void terminateExpiredPoints();
+        void terminateExpiredPoints(const int currentTimeInSeconds);
+        LIDARPoint midpoint();
 
         // ENCAPSULATION METHODS:
-        LIDARPoint get(int x, int y, int z);
-        void set(int x, int y, int z, char pointSymbol);
+        constexpr inline LIDARPoint get(const int x, const int y, const int z) {
+            if (index(x,y,z) < 0 || index(x,y,z) > standardisedCloudSize * standardisedCloudSize * standardisedCloudSize) {
+                throw std::out_of_range("Attempt to access out of bounds index occurred");
+            }else {
+                return ptrArray[index(x, y, z)];
+            }
+        }
+
+        inline void set(const int x, const int y, const int z, const char pointSymbol) {
+            if (index(x,y,z) < 0 || index(x,y,z) > standardisedCloudSize * standardisedCloudSize * standardisedCloudSize) {
+                throw std::out_of_range("Attempt to access out of bounds index occurred");
+            }else {
+                ptrArray[index(x,y,z)] = DSLib::LIDARPoint(x, y, z, pointSymbol);
+            }
+        }
     };
 }
 

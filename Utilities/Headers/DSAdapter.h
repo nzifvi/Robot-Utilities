@@ -15,17 +15,17 @@ class DSAdapter {
 public:
     static MathLib::Vector LIDARPointToVector(LIDARPoint& originPoint, LIDARPoint& terminalPoint) {
         return MathLib::Vector(
-            terminalPoint.getX() - originPoint.getX(),
-            terminalPoint.getY() - originPoint.getY(),
-            terminalPoint.getZ() - originPoint.getZ()
+            static_cast<float>(terminalPoint.getX() - originPoint.getX()),
+            static_cast<float>(terminalPoint.getY() - originPoint.getY()),
+            static_cast<float>(terminalPoint.getZ() - originPoint.getZ())
             );
     }
 
     static MathLib::Vector LIDARPointToVector(LIDARPoint& originPoint, int xOrigin, int yOrigin, int zOrigin) {
         return MathLib::Vector(
-            originPoint.getX() - xOrigin,
-            originPoint.getY() - yOrigin,
-            originPoint.getZ() - zOrigin
+            static_cast<float>(originPoint.getX() - xOrigin),
+            static_cast<float>(originPoint.getY() - yOrigin),
+            static_cast<float>(originPoint.getZ() - zOrigin)
             );
     }
 };

@@ -6,6 +6,7 @@
 #define VECTOR_H
 
 #include <cmath>
+#include <iostream>
 
 namespace MathLib {
     class Vector {
@@ -28,7 +29,6 @@ namespace MathLib {
         float getYComponent();
         float getZComponent();
     };
-
     inline Vector operator+(Vector& v1, Vector& v2) {
         return Vector(
             v1.getXComponent() + v2.getXComponent(),
@@ -47,6 +47,10 @@ namespace MathLib {
 
     inline float operator*(Vector& v1, Vector& v2) {
         return  v1.getXComponent() * v2.getXComponent() + v1.getYComponent() * v2.getYComponent() + v1.getZComponent() * v2.getZComponent();
+    }
+
+    inline std::ostream& operator<<(std::ostream& os, Vector& v){
+        return os << "[" << v.getXComponent() << ", " << v.getYComponent() << ", " << v.getZComponent() << "]^T";
     }
 
     inline float angleBetween(Vector& v1, Vector& v2) {
