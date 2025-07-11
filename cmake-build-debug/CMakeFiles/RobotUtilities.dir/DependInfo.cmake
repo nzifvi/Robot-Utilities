@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Implementations/DSAdapter.cpp" "CMakeFiles/RobotUtilities.dir/Utilities/Implementations/DSAdapter.cpp.obj" "gcc" "CMakeFiles/RobotUtilities.dir/Utilities/Implementations/DSAdapter.cpp.obj.d"
   "C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Implementations/LIDARCloud.cpp" "CMakeFiles/RobotUtilities.dir/Utilities/Implementations/LIDARCloud.cpp.obj" "gcc" "CMakeFiles/RobotUtilities.dir/Utilities/Implementations/LIDARCloud.cpp.obj.d"
   "C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Implementations/LIDARPoint.cpp" "CMakeFiles/RobotUtilities.dir/Utilities/Implementations/LIDARPoint.cpp.obj" "gcc" "CMakeFiles/RobotUtilities.dir/Utilities/Implementations/LIDARPoint.cpp.obj.d"
+  "C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Implementations/Vector.cpp" "CMakeFiles/RobotUtilities.dir/Utilities/Implementations/Vector.cpp.obj" "gcc" "CMakeFiles/RobotUtilities.dir/Utilities/Implementations/Vector.cpp.obj.d"
   "C:/Users/benja/CLionProjects/Robot-Utilities/main.cpp" "CMakeFiles/RobotUtilities.dir/main.cpp.obj" "gcc" "CMakeFiles/RobotUtilities.dir/main.cpp.obj.d"
   )
 

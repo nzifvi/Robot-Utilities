@@ -207,6 +207,30 @@ Utilities/Implementations/LIDARPoint.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/Utilities/Implementations/LIDARPoint.cpp.s
 .PHONY : Utilities/Implementations/LIDARPoint.cpp.s
 
+Utilities/Implementations/Vector.obj: Utilities/Implementations/Vector.cpp.obj
+.PHONY : Utilities/Implementations/Vector.obj
+
+# target to build an object file
+Utilities/Implementations/Vector.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/Utilities/Implementations/Vector.cpp.obj
+.PHONY : Utilities/Implementations/Vector.cpp.obj
+
+Utilities/Implementations/Vector.i: Utilities/Implementations/Vector.cpp.i
+.PHONY : Utilities/Implementations/Vector.i
+
+# target to preprocess a source file
+Utilities/Implementations/Vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/Utilities/Implementations/Vector.cpp.i
+.PHONY : Utilities/Implementations/Vector.cpp.i
+
+Utilities/Implementations/Vector.s: Utilities/Implementations/Vector.cpp.s
+.PHONY : Utilities/Implementations/Vector.s
+
+# target to generate assembly for a file
+Utilities/Implementations/Vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/Utilities/Implementations/Vector.cpp.s
+.PHONY : Utilities/Implementations/Vector.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -250,6 +274,9 @@ help:
 	@echo ... Utilities/Implementations/LIDARPoint.obj
 	@echo ... Utilities/Implementations/LIDARPoint.i
 	@echo ... Utilities/Implementations/LIDARPoint.s
+	@echo ... Utilities/Implementations/Vector.obj
+	@echo ... Utilities/Implementations/Vector.i
+	@echo ... Utilities/Implementations/Vector.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

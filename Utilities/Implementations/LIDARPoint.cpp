@@ -1,34 +1,39 @@
 #include "../Headers/LIDARPoint.h"
 
-// CONSTRUCTOR(S) AND DESTRUCTOR(S):
+namespace DSLib {
 
-DSLib::LIDARPoint::LIDARPoint() {
-    x = 0;
-    y = 0;
-    z = 0;
-    pointType = '?';
-    timeOfScan = 0;
-}
+    // CONSTRUCTOR(S) AND DESTRUCTOR(S):
 
-DSLib::LIDARPoint::LIDARPoint(int x, int y, int z, char pointType) {
-    this->x = x;
-    this->y = y;
-    this->z = z;
-    this->pointType = pointType;
-    timeOfScan = getCurrentTimeInSeconds();
-}
+    LIDARPoint::LIDARPoint() {
+        x = 0;
+        y = 0;
+        z = 0;
+        pointType = '?';
+        timeOfScan = 0;
+    }
 
-// PRIVATE FUNCTION MEMBER(S):
-int DSLib::LIDARPoint::getCurrentTimeInSeconds() {
-    time_t now = time(nullptr);
-    struct tm* timeNow = gmtime(&now);
-    const int currentTimeInSeconds = timeNow->tm_sec + (timeNow->tm_min * 60) + (timeNow->tm_hour * 3600);
-    delete timeNow;
-    return currentTimeInSeconds;
-}
+    LIDARPoint::LIDARPoint(int x, int y, int z, char pointType) {
+        this->x = x;
+        this->y = y;
+        this->z = z;
+        this->pointType = pointType;
+        timeOfScan = getCurrentTimeInSeconds();
+    }
 
-// PUBLIC FUNCTION MEMBER(S):
+    // PRIVATE FUNCTION MEMBER(S):
+    int LIDARPoint::getCurrentTimeInSeconds() {
+        time_t now = time(nullptr);
+        struct tm* timeNow = gmtime(&now);
+        const int currentTimeInSeconds = timeNow->tm_sec + (timeNow->tm_min * 60) + (timeNow->tm_hour * 3600);
+        delete timeNow;
+        return currentTimeInSeconds;
+    }
 
-void DSLib::LIDARPoint::updateTimeOfScan() {
-    timeOfScan = getCurrentTimeInSeconds();
+    // PUBLIC FUNCTION MEMBER(S):
+
+    void LIDARPoint::updateTimeOfScan() {
+        timeOfScan = getCurrentTimeInSeconds();
+    }
+
+
 }

@@ -6,7 +6,7 @@
 #define LIDARPOINT_H
 
 #include <ctime>
-
+#include <iostream>
 namespace DSLib {
     class LIDARPoint {
     private:
@@ -28,19 +28,20 @@ namespace DSLib {
         void updateTimeOfScan();
 
         // ENCAPSULATION FUNCTION MEMBER(S):
-        constexpr inline int getX() {return x;}
-        constexpr inline int getY() {return y;}
-        constexpr inline int getZ() {return z;}
-        constexpr inline char getPointType() {return pointType;}
-        constexpr inline int getTimeOfScan() {return timeOfScan;}
+        inline int getX() const {return x;}
+        inline int getY() const {return y;}
+        inline int getZ() const {return z;}
+        inline char getPointType() const {return pointType;}
+        inline int getTimeOfScan() const {return timeOfScan;}
         inline void setX(const int x) {this->x = x;}
         inline void setY(const int y) {this->y = y;}
         inline void setZ(const int z) {this->z = z;}
         inline void setPointType(const char pointType) {this->pointType = pointType;}
     };
+
+    inline std::ostream& operator<<(std::ostream& os, const LIDARPoint& point) {
+        return os << "(x:" << point.getX() << ", y:" << point.getY() << ", z:" << point.getZ() << ")";
+    }
 }
-
-
-
 
 #endif //LIDARPOINT_H

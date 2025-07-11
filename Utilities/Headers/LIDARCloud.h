@@ -20,7 +20,7 @@ namespace DSLib {
         int arraySize;
 
         // PRIVATE FUNCTION MEMBER(S):
-        inline size_t index(int x, int y, int z);
+               size_t index(int x, int y, int z);
         inline int getCurrentTimeInSeconds();
         inline int standardiseOrdinate(const float ordinate);
     public:
@@ -30,11 +30,12 @@ namespace DSLib {
 
         // PUBLIC FUNCTION MEMBER(S):
         void terminateExpiredPoints(const int currentTimeInSeconds);
+
         LIDARPoint midpoint();
 
         // ENCAPSULATION METHODS:
-        constexpr inline LIDARPoint get(const int x, const int y, const int z) {
-            if (index(x,y,z) < 0 || index(x,y,z) > standardisedCloudSize * standardisedCloudSize * standardisedCloudSize) {
+        inline LIDARPoint get(const int x, const int y, const int z) {
+            if (index(x,y,z) < 0 || x > standardisedCloudSize || y > standardisedCloudSize || z > standardisedCloudSize) {
                 throw std::out_of_range("Attempt to access out of bounds index occurred");
             }else {
                 return ptrArray[index(x, y, z)];
@@ -42,7 +43,7 @@ namespace DSLib {
         }
 
         inline void set(const int x, const int y, const int z, const char pointSymbol) {
-            if (index(x,y,z) < 0 || index(x,y,z) > standardisedCloudSize * standardisedCloudSize * standardisedCloudSize) {
+            if (index(x,y,z) < 0 || x > standardisedCloudSize || y > standardisedCloudSize || z > standardisedCloudSize) {
                 throw std::out_of_range("Attempt to access out of bounds index occurred");
             }else {
                 ptrArray[index(x,y,z)] = DSLib::LIDARPoint(x, y, z, pointSymbol);
