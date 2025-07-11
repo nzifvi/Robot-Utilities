@@ -23,6 +23,8 @@ namespace DSLib {
         int getX();
         int getY();
         int getZ();
+        char getPointType();
+        char setPointType(char pointType);
     };
 }
 

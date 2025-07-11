@@ -9,4 +9,7 @@ add_executable(RobotUtilities main.cpp
         Utilities/Implementations/LIDARCloud.cpp
         Utilities/Headers/LIDARCloud.h
         Utilities/Implementations/LIDARPoint.cpp
-        Utilities/Headers/LIDARPoint.h)
+        Utilities/Headers/LIDARPoint.h
+        Utilities/Headers/Exceptions.h
+        Utilities/Implementations/DSAdapter.cpp
+        Utilities/Headers/DSAdapter.h)

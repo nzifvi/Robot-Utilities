@@ -22,3 +22,11 @@ int DSLib::LIDARPoint::getY() {
 int DSLib::LIDARPoint::getZ() {
     return z;
 }
+
+char DSLib::LIDARPoint::getPointType() {
+    return pointType;
+}
+
+char DSLib::LIDARPoint::setPointType(char pointType) {
+    this->pointType = pointType;
+}
