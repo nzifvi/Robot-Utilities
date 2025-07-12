@@ -8,13 +8,20 @@
 #include <ctime>
 #include <iostream>
 namespace DSLib {
+    enum PointType {
+        UNSCANNED = 0,
+        GROUND = 1,
+        WALL = 2,
+        SLOPE = 3
+    };
+
     class LIDARPoint {
     private:
         int  timeOfScan;
         int  x;
         int  y;
         int  z;
-        char pointType;
+        PointType type;
 
         // PRIVATE FUNCTION MEMBER(S):
         int getCurrentTimeInSeconds();
@@ -22,7 +29,7 @@ namespace DSLib {
     public:
         // CONSTRUCTOR(S) AND DESTRUCTOR(S):
         LIDARPoint();
-        LIDARPoint(int x, int y, int z, char pointType);
+        LIDARPoint(int x, int y, int z, PointType type);
 
         // PUBLIC FUNCTION MEMBER(S):
         void updateTimeOfScan();
@@ -31,12 +38,12 @@ namespace DSLib {
         inline int getX() const {return x;}
         inline int getY() const {return y;}
         inline int getZ() const {return z;}
-        inline char getPointType() const {return pointType;}
+        inline char getPointType() const {return type;}
         inline int getTimeOfScan() const {return timeOfScan;}
         inline void setX(const int x) {this->x = x;}
         inline void setY(const int y) {this->y = y;}
         inline void setZ(const int z) {this->z = z;}
-        inline void setPointType(const char pointType) {this->pointType = pointType;}
+        inline void setPointType(const PointType type) {this->type = type;}
     };
 
     inline std::ostream& operator<<(std::ostream& os, const LIDARPoint& point) {

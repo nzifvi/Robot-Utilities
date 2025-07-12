@@ -1,4 +1,12 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/RobotUtilities.dir/Engines/Implementations/CentralEngine.cpp.obj"
+  "CMakeFiles/RobotUtilities.dir/Engines/Implementations/CentralEngine.cpp.obj.d"
+  "CMakeFiles/RobotUtilities.dir/Engines/Implementations/LIDAREngine.cpp.obj"
+  "CMakeFiles/RobotUtilities.dir/Engines/Implementations/LIDAREngine.cpp.obj.d"
+  "CMakeFiles/RobotUtilities.dir/Engines/Implementations/MovementEngine.cpp.obj"
+  "CMakeFiles/RobotUtilities.dir/Engines/Implementations/MovementEngine.cpp.obj.d"
+  "CMakeFiles/RobotUtilities.dir/Utilities/Headers/Matrix.cpp.obj"
+  "CMakeFiles/RobotUtilities.dir/Utilities/Headers/Matrix.cpp.obj.d"
   "CMakeFiles/RobotUtilities.dir/Utilities/Implementations/DSAdapter.cpp.obj"
   "CMakeFiles/RobotUtilities.dir/Utilities/Implementations/DSAdapter.cpp.obj.d"
   "CMakeFiles/RobotUtilities.dir/Utilities/Implementations/LIDARCloud.cpp.obj"

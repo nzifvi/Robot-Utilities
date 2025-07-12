@@ -84,12 +84,12 @@ clean: CMakeFiles/RobotUtilities.dir/clean
 CMakeFiles/RobotUtilities.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\benja\CLionProjects\Robot-Utilities\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target RobotUtilities"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\benja\CLionProjects\Robot-Utilities\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target RobotUtilities"
 .PHONY : CMakeFiles/RobotUtilities.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/RobotUtilities.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\benja\CLionProjects\Robot-Utilities\cmake-build-debug\CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\benja\CLionProjects\Robot-Utilities\cmake-build-debug\CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/RobotUtilities.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\benja\CLionProjects\Robot-Utilities\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/RobotUtilities.dir/rule
@@ -101,7 +101,7 @@ RobotUtilities: CMakeFiles/RobotUtilities.dir/rule
 # codegen rule for target.
 CMakeFiles/RobotUtilities.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\benja\CLionProjects\Robot-Utilities\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6 "Finished codegen for target RobotUtilities"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\benja\CLionProjects\Robot-Utilities\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Finished codegen for target RobotUtilities"
 .PHONY : CMakeFiles/RobotUtilities.dir/codegen
 
 # clean rule for target.

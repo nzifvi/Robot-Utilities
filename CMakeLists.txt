@@ -20,4 +20,12 @@ add_executable(
 
         Utilities/Implementations/DSAdapter.cpp
         Utilities/Headers/DSAdapter.h
+        Engines/Implementations/MovementEngine.cpp
+        Engines/Headers/MovementEngine.h
+        Engines/Implementations/LIDAREngine.cpp
+        Engines/Headers/LIDAREngine.h
+        Engines/Implementations/CentralEngine.cpp
+        Engines/Headers/CentralEngine.h
+        Utilities/Implementations/Matrix.cpp
+        Utilities/Headers/Matrix.h
 )

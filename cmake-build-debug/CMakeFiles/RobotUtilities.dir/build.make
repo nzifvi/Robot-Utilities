@@ -141,13 +141,73 @@ CMakeFiles/RobotUtilities.dir/Utilities/Implementations/DSAdapter.cpp.s: cmake_f
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RobotUtilities.dir/Utilities/Implementations/DSAdapter.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\benja\CLionProjects\Robot-Utilities\Utilities\Implementations\DSAdapter.cpp -o CMakeFiles\RobotUtilities.dir\Utilities\Implementations\DSAdapter.cpp.s
 
+CMakeFiles/RobotUtilities.dir/Engines/Implementations/MovementEngine.cpp.obj: CMakeFiles/RobotUtilities.dir/flags.make
+CMakeFiles/RobotUtilities.dir/Engines/Implementations/MovementEngine.cpp.obj: C:/Users/benja/CLionProjects/Robot-Utilities/Engines/Implementations/MovementEngine.cpp
+CMakeFiles/RobotUtilities.dir/Engines/Implementations/MovementEngine.cpp.obj: CMakeFiles/RobotUtilities.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\benja\CLionProjects\Robot-Utilities\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/RobotUtilities.dir/Engines/Implementations/MovementEngine.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RobotUtilities.dir/Engines/Implementations/MovementEngine.cpp.obj -MF CMakeFiles\RobotUtilities.dir\Engines\Implementations\MovementEngine.cpp.obj.d -o CMakeFiles\RobotUtilities.dir\Engines\Implementations\MovementEngine.cpp.obj -c C:\Users\benja\CLionProjects\Robot-Utilities\Engines\Implementations\MovementEngine.cpp
+
+CMakeFiles/RobotUtilities.dir/Engines/Implementations/MovementEngine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RobotUtilities.dir/Engines/Implementations/MovementEngine.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\benja\CLionProjects\Robot-Utilities\Engines\Implementations\MovementEngine.cpp > CMakeFiles\RobotUtilities.dir\Engines\Implementations\MovementEngine.cpp.i
+
+CMakeFiles/RobotUtilities.dir/Engines/Implementations/MovementEngine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RobotUtilities.dir/Engines/Implementations/MovementEngine.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\benja\CLionProjects\Robot-Utilities\Engines\Implementations\MovementEngine.cpp -o CMakeFiles\RobotUtilities.dir\Engines\Implementations\MovementEngine.cpp.s
+
+CMakeFiles/RobotUtilities.dir/Engines/Implementations/LIDAREngine.cpp.obj: CMakeFiles/RobotUtilities.dir/flags.make
+CMakeFiles/RobotUtilities.dir/Engines/Implementations/LIDAREngine.cpp.obj: C:/Users/benja/CLionProjects/Robot-Utilities/Engines/Implementations/LIDAREngine.cpp
+CMakeFiles/RobotUtilities.dir/Engines/Implementations/LIDAREngine.cpp.obj: CMakeFiles/RobotUtilities.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\benja\CLionProjects\Robot-Utilities\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/RobotUtilities.dir/Engines/Implementations/LIDAREngine.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RobotUtilities.dir/Engines/Implementations/LIDAREngine.cpp.obj -MF CMakeFiles\RobotUtilities.dir\Engines\Implementations\LIDAREngine.cpp.obj.d -o CMakeFiles\RobotUtilities.dir\Engines\Implementations\LIDAREngine.cpp.obj -c C:\Users\benja\CLionProjects\Robot-Utilities\Engines\Implementations\LIDAREngine.cpp
+
+CMakeFiles/RobotUtilities.dir/Engines/Implementations/LIDAREngine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RobotUtilities.dir/Engines/Implementations/LIDAREngine.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\benja\CLionProjects\Robot-Utilities\Engines\Implementations\LIDAREngine.cpp > CMakeFiles\RobotUtilities.dir\Engines\Implementations\LIDAREngine.cpp.i
+
+CMakeFiles/RobotUtilities.dir/Engines/Implementations/LIDAREngine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RobotUtilities.dir/Engines/Implementations/LIDAREngine.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\benja\CLionProjects\Robot-Utilities\Engines\Implementations\LIDAREngine.cpp -o CMakeFiles\RobotUtilities.dir\Engines\Implementations\LIDAREngine.cpp.s
+
+CMakeFiles/RobotUtilities.dir/Engines/Implementations/CentralEngine.cpp.obj: CMakeFiles/RobotUtilities.dir/flags.make
+CMakeFiles/RobotUtilities.dir/Engines/Implementations/CentralEngine.cpp.obj: C:/Users/benja/CLionProjects/Robot-Utilities/Engines/Implementations/CentralEngine.cpp
+CMakeFiles/RobotUtilities.dir/Engines/Implementations/CentralEngine.cpp.obj: CMakeFiles/RobotUtilities.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\benja\CLionProjects\Robot-Utilities\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/RobotUtilities.dir/Engines/Implementations/CentralEngine.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RobotUtilities.dir/Engines/Implementations/CentralEngine.cpp.obj -MF CMakeFiles\RobotUtilities.dir\Engines\Implementations\CentralEngine.cpp.obj.d -o CMakeFiles\RobotUtilities.dir\Engines\Implementations\CentralEngine.cpp.obj -c C:\Users\benja\CLionProjects\Robot-Utilities\Engines\Implementations\CentralEngine.cpp
+
+CMakeFiles/RobotUtilities.dir/Engines/Implementations/CentralEngine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RobotUtilities.dir/Engines/Implementations/CentralEngine.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\benja\CLionProjects\Robot-Utilities\Engines\Implementations\CentralEngine.cpp > CMakeFiles\RobotUtilities.dir\Engines\Implementations\CentralEngine.cpp.i
+
+CMakeFiles/RobotUtilities.dir/Engines/Implementations/CentralEngine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RobotUtilities.dir/Engines/Implementations/CentralEngine.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\benja\CLionProjects\Robot-Utilities\Engines\Implementations\CentralEngine.cpp -o CMakeFiles\RobotUtilities.dir\Engines\Implementations\CentralEngine.cpp.s
+
+CMakeFiles/RobotUtilities.dir/Utilities/Headers/Matrix.cpp.obj: CMakeFiles/RobotUtilities.dir/flags.make
+CMakeFiles/RobotUtilities.dir/Utilities/Headers/Matrix.cpp.obj: C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/Matrix.cpp
+CMakeFiles/RobotUtilities.dir/Utilities/Headers/Matrix.cpp.obj: CMakeFiles/RobotUtilities.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\benja\CLionProjects\Robot-Utilities\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/RobotUtilities.dir/Utilities/Headers/Matrix.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RobotUtilities.dir/Utilities/Headers/Matrix.cpp.obj -MF CMakeFiles\RobotUtilities.dir\Utilities\Headers\Matrix.cpp.obj.d -o CMakeFiles\RobotUtilities.dir\Utilities\Headers\Matrix.cpp.obj -c C:\Users\benja\CLionProjects\Robot-Utilities\Utilities\Headers\Matrix.cpp
+
+CMakeFiles/RobotUtilities.dir/Utilities/Headers/Matrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RobotUtilities.dir/Utilities/Headers/Matrix.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\benja\CLionProjects\Robot-Utilities\Utilities\Headers\Matrix.cpp > CMakeFiles\RobotUtilities.dir\Utilities\Headers\Matrix.cpp.i
+
+CMakeFiles/RobotUtilities.dir/Utilities/Headers/Matrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RobotUtilities.dir/Utilities/Headers/Matrix.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\benja\CLionProjects\Robot-Utilities\Utilities\Headers\Matrix.cpp -o CMakeFiles\RobotUtilities.dir\Utilities\Headers\Matrix.cpp.s
+
 # Object files for target RobotUtilities
 RobotUtilities_OBJECTS = \
 "CMakeFiles/RobotUtilities.dir/main.cpp.obj" \
 "CMakeFiles/RobotUtilities.dir/Utilities/Implementations/Vector.cpp.obj" \
 "CMakeFiles/RobotUtilities.dir/Utilities/Implementations/LIDARCloud.cpp.obj" \
 "CMakeFiles/RobotUtilities.dir/Utilities/Implementations/LIDARPoint.cpp.obj" \
-"CMakeFiles/RobotUtilities.dir/Utilities/Implementations/DSAdapter.cpp.obj"
+"CMakeFiles/RobotUtilities.dir/Utilities/Implementations/DSAdapter.cpp.obj" \
+"CMakeFiles/RobotUtilities.dir/Engines/Implementations/MovementEngine.cpp.obj" \
+"CMakeFiles/RobotUtilities.dir/Engines/Implementations/LIDAREngine.cpp.obj" \
+"CMakeFiles/RobotUtilities.dir/Engines/Implementations/CentralEngine.cpp.obj" \
+"CMakeFiles/RobotUtilities.dir/Utilities/Headers/Matrix.cpp.obj"
 
 # External object files for target RobotUtilities
 RobotUtilities_EXTERNAL_OBJECTS =
@@ -157,11 +217,15 @@ RobotUtilities.exe: CMakeFiles/RobotUtilities.dir/Utilities/Implementations/Vect
 RobotUtilities.exe: CMakeFiles/RobotUtilities.dir/Utilities/Implementations/LIDARCloud.cpp.obj
 RobotUtilities.exe: CMakeFiles/RobotUtilities.dir/Utilities/Implementations/LIDARPoint.cpp.obj
 RobotUtilities.exe: CMakeFiles/RobotUtilities.dir/Utilities/Implementations/DSAdapter.cpp.obj
+RobotUtilities.exe: CMakeFiles/RobotUtilities.dir/Engines/Implementations/MovementEngine.cpp.obj
+RobotUtilities.exe: CMakeFiles/RobotUtilities.dir/Engines/Implementations/LIDAREngine.cpp.obj
+RobotUtilities.exe: CMakeFiles/RobotUtilities.dir/Engines/Implementations/CentralEngine.cpp.obj
+RobotUtilities.exe: CMakeFiles/RobotUtilities.dir/Utilities/Headers/Matrix.cpp.obj
 RobotUtilities.exe: CMakeFiles/RobotUtilities.dir/build.make
 RobotUtilities.exe: CMakeFiles/RobotUtilities.dir/linkLibs.rsp
 RobotUtilities.exe: CMakeFiles/RobotUtilities.dir/objects1.rsp
 RobotUtilities.exe: CMakeFiles/RobotUtilities.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\benja\CLionProjects\Robot-Utilities\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable RobotUtilities.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\benja\CLionProjects\Robot-Utilities\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable RobotUtilities.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\RobotUtilities.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

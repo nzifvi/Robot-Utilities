@@ -42,11 +42,11 @@ namespace DSLib {
             }
         }
 
-        inline void set(const int x, const int y, const int z, const char pointSymbol) {
+        inline void set(const int x, const int y, const int z, const PointType type) {
             if (index(x,y,z) < 0 || x > standardisedCloudSize || y > standardisedCloudSize || z > standardisedCloudSize) {
                 throw std::out_of_range("Attempt to access out of bounds index occurred");
             }else {
-                ptrArray[index(x,y,z)] = DSLib::LIDARPoint(x, y, z, pointSymbol);
+                ptrArray[index(x,y,z)] = DSLib::LIDARPoint(x, y, z, type);
             }
         }
     };
