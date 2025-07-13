@@ -5,7 +5,13 @@
 #ifndef LIDARENGINE_H
 #define LIDARENGINE_H
 
+#include <iostream>
+#include <cmath>
+#include <cstddef>   // for std::size_t, might help mbstate_t indirectly
+#include <wchar.h>   // explicitly brings mbstate_t, wint_t
+
 namespace LIDARLib {
+
 
 #include "C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/Vector.h"
 #include "C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/LIDARCloud.h"

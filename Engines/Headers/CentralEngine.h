@@ -5,10 +5,10 @@
 #ifndef CENTRALENGINE_H
 #define CENTRALENGINE_H
 
-namespace CentralEngineLib {
-
 #include "LIDAREngine.h"
 #include "MovementEngine.h"
+
+namespace CentralEngineLib {
 
 class CentralEngine {
 private:

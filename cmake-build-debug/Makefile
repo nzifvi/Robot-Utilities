@@ -207,30 +207,6 @@ Engines/Implementations/MovementEngine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/Engines/Implementations/MovementEngine.cpp.s
 .PHONY : Engines/Implementations/MovementEngine.cpp.s
 
-Utilities/Headers/Matrix.obj: Utilities/Headers/Matrix.cpp.obj
-.PHONY : Utilities/Headers/Matrix.obj
-
-# target to build an object file
-Utilities/Headers/Matrix.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/Utilities/Headers/Matrix.cpp.obj
-.PHONY : Utilities/Headers/Matrix.cpp.obj
-
-Utilities/Headers/Matrix.i: Utilities/Headers/Matrix.cpp.i
-.PHONY : Utilities/Headers/Matrix.i
-
-# target to preprocess a source file
-Utilities/Headers/Matrix.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/Utilities/Headers/Matrix.cpp.i
-.PHONY : Utilities/Headers/Matrix.cpp.i
-
-Utilities/Headers/Matrix.s: Utilities/Headers/Matrix.cpp.s
-.PHONY : Utilities/Headers/Matrix.s
-
-# target to generate assembly for a file
-Utilities/Headers/Matrix.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/Utilities/Headers/Matrix.cpp.s
-.PHONY : Utilities/Headers/Matrix.cpp.s
-
 Utilities/Implementations/DSAdapter.obj: Utilities/Implementations/DSAdapter.cpp.obj
 .PHONY : Utilities/Implementations/DSAdapter.obj
 
@@ -303,6 +279,30 @@ Utilities/Implementations/LIDARPoint.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/Utilities/Implementations/LIDARPoint.cpp.s
 .PHONY : Utilities/Implementations/LIDARPoint.cpp.s
 
+Utilities/Implementations/Matrix.obj: Utilities/Implementations/Matrix.cpp.obj
+.PHONY : Utilities/Implementations/Matrix.obj
+
+# target to build an object file
+Utilities/Implementations/Matrix.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/Utilities/Implementations/Matrix.cpp.obj
+.PHONY : Utilities/Implementations/Matrix.cpp.obj
+
+Utilities/Implementations/Matrix.i: Utilities/Implementations/Matrix.cpp.i
+.PHONY : Utilities/Implementations/Matrix.i
+
+# target to preprocess a source file
+Utilities/Implementations/Matrix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/Utilities/Implementations/Matrix.cpp.i
+.PHONY : Utilities/Implementations/Matrix.cpp.i
+
+Utilities/Implementations/Matrix.s: Utilities/Implementations/Matrix.cpp.s
+.PHONY : Utilities/Implementations/Matrix.s
+
+# target to generate assembly for a file
+Utilities/Implementations/Matrix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/Utilities/Implementations/Matrix.cpp.s
+.PHONY : Utilities/Implementations/Matrix.cpp.s
+
 Utilities/Implementations/Vector.obj: Utilities/Implementations/Vector.cpp.obj
 .PHONY : Utilities/Implementations/Vector.obj
 
@@ -370,9 +370,6 @@ help:
 	@echo ... Engines/Implementations/MovementEngine.obj
 	@echo ... Engines/Implementations/MovementEngine.i
 	@echo ... Engines/Implementations/MovementEngine.s
-	@echo ... Utilities/Headers/Matrix.obj
-	@echo ... Utilities/Headers/Matrix.i
-	@echo ... Utilities/Headers/Matrix.s
 	@echo ... Utilities/Implementations/DSAdapter.obj
 	@echo ... Utilities/Implementations/DSAdapter.i
 	@echo ... Utilities/Implementations/DSAdapter.s
@@ -382,6 +379,9 @@ help:
 	@echo ... Utilities/Implementations/LIDARPoint.obj
 	@echo ... Utilities/Implementations/LIDARPoint.i
 	@echo ... Utilities/Implementations/LIDARPoint.s
+	@echo ... Utilities/Implementations/Matrix.obj
+	@echo ... Utilities/Implementations/Matrix.i
+	@echo ... Utilities/Implementations/Matrix.s
 	@echo ... Utilities/Implementations/Vector.obj
 	@echo ... Utilities/Implementations/Vector.i
 	@echo ... Utilities/Implementations/Vector.s

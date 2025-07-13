@@ -10,6 +10,7 @@
 #include <ctime>
 
 namespace DSLib {
+
     class LIDARCloud {
     private:
         int cloudSize;
@@ -36,7 +37,7 @@ namespace DSLib {
         // ENCAPSULATION METHODS:
         inline LIDARPoint get(const int x, const int y, const int z) {
             if (index(x,y,z) < 0 || x > standardisedCloudSize || y > standardisedCloudSize || z > standardisedCloudSize) {
-                throw std::out_of_range("Attempt to access out of bounds index occurred");
+                throw ::std::out_of_range("Attempt to access out of bounds index occurred");
             }else {
                 return ptrArray[index(x, y, z)];
             }
@@ -44,7 +45,7 @@ namespace DSLib {
 
         inline void set(const int x, const int y, const int z, const PointType type) {
             if (index(x,y,z) < 0 || x > standardisedCloudSize || y > standardisedCloudSize || z > standardisedCloudSize) {
-                throw std::out_of_range("Attempt to access out of bounds index occurred");
+                throw ::std::out_of_range("Attempt to access out of bounds index occurred");
             }else {
                 ptrArray[index(x,y,z)] = DSLib::LIDARPoint(x, y, z, type);
             }

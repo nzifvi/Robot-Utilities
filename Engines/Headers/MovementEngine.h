@@ -5,22 +5,20 @@
 #ifndef MOVEMENTENGINE_H
 #define MOVEMENTENGINE_H
 
-#include "C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/Vector.h"
-#include "C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/LIDARCloud.h"
-#include "C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/LIDARPoint.h"
+#include "LIDARCloud.h"
 
 namespace MovementLib {
 
 class MovementEngine {
 private:
     // DATA MEMBER(S):
-    DSLib::LIDARCloud& addressCloud;
+    //DSLib::LIDARCloud addressCloud;
 
     // PRIVATE FUNCTION MEMBER(S):
 
 public:
     // CONSTRUCTOR(S) AND DESTRUCTOR(S):
-    MovementEngine(const DSLib::LIDARCloud& _addressCloud);
+    //MovementEngine(const DSLib::LIDARCloud& addressCloud);
     ~MovementEngine();
 
     // PUBLIC FUNCTION MEMBER(S):

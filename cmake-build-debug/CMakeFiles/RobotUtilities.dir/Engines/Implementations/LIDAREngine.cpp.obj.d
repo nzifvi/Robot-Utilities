@@ -1,6 +1,6 @@
-CMakeFiles/RobotUtilities.dir/Utilities/Implementations/Vector.cpp.obj: \
- C:\Users\benja\CLionProjects\Robot-Utilities\Utilities\Implementations\Vector.cpp \
- C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/Vector.h \
+CMakeFiles/RobotUtilities.dir/Engines/Implementations/LIDAREngine.cpp.obj: \
+ C:\Users\benja\CLionProjects\Robot-Utilities\Engines\Implementations\LIDAREngine.cpp \
+ C:/Users/benja/CLionProjects/Robot-Utilities/Engines/Headers/LIDAREngine.h \
  C:/Program\ Files/JetBrains/CLion\ 2025.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Program\ Files/JetBrains/CLion\ 2025.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Program\ Files/JetBrains/CLion\ 2025.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -166,4 +166,9 @@ CMakeFiles/RobotUtilities.dir/Utilities/Implementations/Vector.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2025.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/modified_bessel_func.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2025.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/poly_hermite.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2025.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/poly_laguerre.tcc \
- C:/Program\ Files/JetBrains/CLion\ 2025.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/riemann_zeta.tcc
+ C:/Program\ Files/JetBrains/CLion\ 2025.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/riemann_zeta.tcc \
+ C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/Vector.h \
+ C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/LIDARCloud.h \
+ C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/LIDARPoint.h \
+ C:/Program\ Files/JetBrains/CLion\ 2025.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime \
+ C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/LIDARPoint.h

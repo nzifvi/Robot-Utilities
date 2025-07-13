@@ -7,6 +7,7 @@
 
 #include <ctime>
 #include <iostream>
+
 namespace DSLib {
     enum PointType {
         UNSCANNED = 0,
@@ -46,7 +47,7 @@ namespace DSLib {
         inline void setPointType(const PointType type) {this->type = type;}
     };
 
-    inline std::ostream& operator<<(std::ostream& os, const LIDARPoint& point) {
+    inline ::std::ostream& operator<<(::std::ostream& os, const LIDARPoint& point) {
         return os << "(x:" << point.getX() << ", y:" << point.getY() << ", z:" << point.getZ() << ")";
     }
 }

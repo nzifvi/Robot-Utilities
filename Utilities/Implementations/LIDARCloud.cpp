@@ -20,7 +20,7 @@ LIDARCloud::LIDARCloud() {
                 ptrArray[index(x, y, z)].setX(x);
                 ptrArray[index(x, y, z)].setY(y);
                 ptrArray[index(x, y, z)].setY(z);
-                ptrArray[index(x, y, z)].setPointType(' ');
+                ptrArray[index(x, y, z)].setPointType(PointType::UNSCANNED);
             }
         }
     }
@@ -55,7 +55,7 @@ LIDARCloud::LIDARCloud() {
             for (int y = 0; y < standardisedCloudSize; y++) {
                 for (int x = 0; x < standardisedCloudSize; x++) {
                     if (getCurrentTimeInSeconds() - ptrArray[index(x, y, z)].getTimeOfScan() >= 2) {
-                    ptrArray[index(x, y, z)].setPointType(' ');
+                    ptrArray[index(x, y, z)].setPointType(PointType::UNSCANNED);
                     ptrArray[index(x,y, z)].updateTimeOfScan();
                     }
                 }
@@ -68,7 +68,7 @@ LIDARCloud::LIDARCloud() {
             standardisedCloudSize / 2,
             standardisedCloudSize / 2,
             standardisedCloudSize / 2,
-            'R'
+            PointType::UNSCANNED
             );
     }
 }

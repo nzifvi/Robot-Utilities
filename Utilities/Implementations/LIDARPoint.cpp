@@ -8,15 +8,15 @@ namespace DSLib {
         x = 0;
         y = 0;
         z = 0;
-        pointType = '?';
+        type = PointType::UNSCANNED;
         timeOfScan = 0;
     }
 
-    LIDARPoint::LIDARPoint(int x, int y, int z, char pointType) {
+    LIDARPoint::LIDARPoint(int x, int y, int z, PointType type) {
         this->x = x;
         this->y = y;
         this->z = z;
-        this->pointType = pointType;
+        this->type = type;
         timeOfScan = getCurrentTimeInSeconds();
     }
 

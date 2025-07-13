@@ -6,11 +6,11 @@
 
 namespace MovementLib {
     // CONSTRUCTOR(S) AND DESTRUCTOR(S)
-    MovementEngine::MovementEngine(const DSLib::LIDARCloud& addressCloud): addressCloud() {
-        this->addressCloud = addressCloud;
-    }
+    //MovementEngine::MovementEngine(const DSLib::LIDARCloud& addressCloud): addressCloud() {
+    //    this->addressCloud = addressCloud;
+    //}
 
-    MovementEngine::~MovementEngine() {
+    //MovementEngine::~MovementEngine() {
 
-    }
+    //}
 } // Movement

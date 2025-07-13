@@ -5,8 +5,8 @@
 #ifndef VECTOR_H
 #define VECTOR_H
 
-#include <cmath>
 #include <iostream>
+#include <cmath>
 
 namespace MathLib {
     class Vector {
@@ -54,7 +54,8 @@ namespace MathLib {
     }
 
     inline float angleBetween(Vector& v1, Vector& v2) {
-        return std::acos(v1 * v2 / v1.magnitude() * v2.magnitude());
+        //return std::acos(v1 * v2 / v1.magnitude() * v2.magnitude());
+        return 0.0f;
     }
 }
 
