@@ -7,14 +7,10 @@
 
 #include <stdexcept>
 #include <iostream>
+#include "Exceptions.h"
 
 namespace MathLib {
-    /*  TO DO LIST:
-     *    1) Create 2 matrix data structures: a 2d and 3d one.
-     *    2) Use a float or double datatype (whichever one requires less bits per var).
-     *    3) Declare and define operator overloads for basic matrix operations plus printing.
-     *    4) Declare and define functions (transpose, determinant (one for 2d, one for 3d)).
-     */
+
     class Matrix {
     private:
         // DATA MEMBER(S):
@@ -27,6 +23,7 @@ namespace MathLib {
     public:
         // CONSTRUCTOR(S) AND DESTRUCTOR(S):
         Matrix(const int rowSize, const int columnSize);
+        Matrix(Matrix& matrix);
         ~Matrix();
 
         // PUBLIC FUNCTION MEMBER(S):
@@ -35,34 +32,31 @@ namespace MathLib {
         // ENCAPSULATION FUNCTION MEMBER(S):
         inline int getRowAmount() {return rows;}
         inline int getColumnAmount() {return columns;}
-        inline float get(int i, int j) {
-            if (i < 0 || j < 0 || i>= rows || j>= columns) {
-                throw std::out_of_range("Non-existent index used in an attempt to access an element (" + std::to_string(i) + "," + std::to_string(j) + ")");
+        inline float get(int rowIndex, int colIndex) {
+            if (rowIndex < 0 || colIndex < 0 || rowIndex >= rows || colIndex >= columns) {
+                throw std::out_of_range("Non-existent index used in an attempt to access an element (" + std::to_string(rowIndex) + "," + std::to_string(colIndex) + ")");
             }else {
-                return ptrArray[i][j];
+                return ptrArray[rowIndex][colIndex];
             }
         }
-        inline void set(int i, int j, float value) {
-            if (i < 0 || j < 0 || i >= rows || j>= columns) {
-                throw std::out_of_range("Non-existent index used in an attempt to access an element (" + std::to_string(i) + "," + std::to_string(j) + ")");
+        inline void set(int rowIndex, int colIndex, float value) {
+            if (rowIndex < 0 || colIndex < 0 || rowIndex >= rows || colIndex >= columns) {
+                throw std::out_of_range("Non-existent index used in an attempt to access an element (" + std::to_string(rowIndex) + "," + std::to_string(colIndex) + ")");
             }else {
-                ptrArray[j][i] = value;
+                ptrArray[rowIndex][colIndex] = value;
             }
         }
     };
 
-    Matrix operator+(Matrix& m1, Matrix& m2);
-    Matrix operator-(Matrix& m1, Matrix& m2);
-    Matrix operator*(Matrix& m1, Matrix& m2);
-    Matrix operator*(float f, Matrix& m1);
+    Matrix operator+(Matrix& m1, Matrix& m2); // FULLY WORKS
+    Matrix operator-(Matrix& m1, Matrix& m2); // FULLY WORKS
+    Matrix operator*(Matrix& m1, Matrix& m2); // FULLY WORKS
+    Matrix operator*(float f, Matrix& m1); // FULLY WORKS
+    ::std::ostream& operator<<(std::ostream& os, Matrix& m); // FULLY WORKS
 
+    void transpose(Matrix& m); // DOES NOT WORK, OVERWRITES
+    float determinant(Matrix& m); // FULLY WORKS
 
-    Matrix transpose(Matrix& m);
-    Matrix transpose(Matrix& m);
-
-    float determinant(Matrix& m);
-
-    ::std::ostream& operator<<(std::ostream& os, Matrix& m);
 
 
 } // MathLib

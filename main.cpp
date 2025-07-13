@@ -2,21 +2,26 @@
 #include "LIDARCloud.h"
 #include "Matrix.h"
 #include "Vector.h"
+#include "DynamicArray.h"
 
 int main() {
-    MathLib::Matrix matrix1(2,2);
-    matrix1.set(0, 0, 1.0f);
-    matrix1.set(0, 1, 9.0f);
-    matrix1.set(1, 0, 2.0f);
-    matrix1.set(1, 1, 9.0f);
+    DSLib::DynamicArray<int> array{};
+    for (int i = 0; i < 10; i++) {
+        array.insert(0, i);
+    }
 
-    MathLib::Matrix matrix2(2,2);
-    matrix2.set(0, 0, 1.0f);
-    matrix2.set(0, 1, 1.0f);
-    matrix2.set(1, 0, 1.0f);
-    matrix2.set(1,1, 1.0f);
+    for (int i = 0; i < array.size(); i++) {
+        std::cout << array.get(i) << ", ";
+    }
 
-    std::cout << matrix2 << std::endl;
+    std::cout << std::endl;
+    array.insert(4,10);
+
+    for (int i = 0; i < array.size(); i++) {
+        std::cout << array.get(i) << ", ";
+    }
+
+    array.remove(3);
 
     return 0;
 }

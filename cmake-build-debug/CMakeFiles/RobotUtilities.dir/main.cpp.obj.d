@@ -154,6 +154,7 @@ CMakeFiles/RobotUtilities.dir/main.cpp.obj: \
  C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/LIDARPoint.h \
  C:/Program\ Files/JetBrains/CLion\ 2025.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime \
  C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/Matrix.h \
+ C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/Exceptions.h \
  C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/Vector.h \
  C:/Program\ Files/JetBrains/CLion\ 2025.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cmath \
  C:/Program\ Files/JetBrains/CLion\ 2025.1/bin/mingw/x86_64-w64-mingw32/include/math.h \
@@ -170,4 +171,5 @@ CMakeFiles/RobotUtilities.dir/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2025.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/modified_bessel_func.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2025.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/poly_hermite.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2025.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/poly_laguerre.tcc \
- C:/Program\ Files/JetBrains/CLion\ 2025.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/riemann_zeta.tcc
+ C:/Program\ Files/JetBrains/CLion\ 2025.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/riemann_zeta.tcc \
+ C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/DynamicArray.h
