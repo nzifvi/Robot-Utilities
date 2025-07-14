@@ -57,10 +57,13 @@ namespace MathLib {
                 }
             }
             std::cout << extractedMatrix << std::endl;
+            // BELOW CAUSES SEGMENTATION FAULT
+            /*
             laplaceExpansionExpression.insert(
                  0,
                  LaplaceExpansionTerm{extractedMatrix,ptrCofactorsMatrix->get(0, excludeColNo)}
              );
+             */
         }
     }
 
