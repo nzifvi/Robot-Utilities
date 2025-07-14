@@ -4,11 +4,13 @@
 
 #include "../Headers/MovementEngine.h"
 
-namespace MovementLib {
+namespace EngineLib {
     // CONSTRUCTOR(S) AND DESTRUCTOR(S)
-    //MovementEngine::MovementEngine(const DSLib::LIDARCloud& addressCloud): addressCloud() {
-    //    this->addressCloud = addressCloud;
-    //}
+    MovementEngine::MovementEngine(const DSLib::LIDARCloud& addressCloud, InitialisationState& state): addressCloud() {
+        this->addressCloud = addressCloud;
+        ptrMovementEngineInitState = &state;
+        *ptrMovementEngineInitState = InitialisationState{InitialisationState::INITIALISING};
+    }
 
     //MovementEngine::~MovementEngine() {
 

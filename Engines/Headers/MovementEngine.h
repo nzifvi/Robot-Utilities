@@ -6,19 +6,21 @@
 #define MOVEMENTENGINE_H
 
 #include "LIDARCloud.h"
+#include "CentralEngine.h"
 
-namespace MovementLib {
+namespace EngineLib {
 
 class MovementEngine {
 private:
     // DATA MEMBER(S):
-    //DSLib::LIDARCloud addressCloud;
+    InitialisationState* ptrMovementEngineInitState = nullptr;
+    DSLib::LIDARCloud addressCloud;
 
     // PRIVATE FUNCTION MEMBER(S):
 
 public:
     // CONSTRUCTOR(S) AND DESTRUCTOR(S):
-    //MovementEngine(const DSLib::LIDARCloud& addressCloud);
+    MovementEngine(const DSLib::LIDARCloud& addressCloud, InitialisationState& state);
     ~MovementEngine();
 
     // PUBLIC FUNCTION MEMBER(S):

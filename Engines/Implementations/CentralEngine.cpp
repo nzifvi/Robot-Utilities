@@ -4,16 +4,14 @@
 
 #include "../Headers/CentralEngine.h"
 
-namespace CentralEngineLib {
+namespace EngineLib {
     // CONSTRUCTOR(S) AND DESTRUCTOR(S):
-
     CentralEngine::CentralEngine() {
-        //ptrLidarEngine = new LIDARLib::LIDAREngine();
-        //ptrMovementEngine = new MovementLib::MovementEngine(ptrLidarEngine->getCloudAddress());
+        ptrLidarEngine = new LIDAREngine(ptrLidarEngineInitialisationState);
+        ptrMovementEngine = new MovementEngine(ptrLidarEngine->getCloud(), ptrMovementEngineInitialisationState);
     }
 
     CentralEngine::~CentralEngine() {
-        //delete ptrLidarEngine;
-        //delete ptrMovementEngine;
+
     }
 } // CentralEngineLib

@@ -5,34 +5,29 @@
 #ifndef LIDARENGINE_H
 #define LIDARENGINE_H
 
-#include <iostream>
-#include <cmath>
-#include <cstddef>   // for std::size_t, might help mbstate_t indirectly
-#include <wchar.h>   // explicitly brings mbstate_t, wint_t
+#include "LIDARCloud.h"
+#include "MovementEngine.h"
+#include "CentralEngine.h"
 
-namespace LIDARLib {
-
-
-#include "C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/Vector.h"
-#include "C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/LIDARCloud.h"
-#include "C:/Users/benja/CLionProjects/Robot-Utilities/Utilities/Headers/LIDARPoint.h"
+namespace EngineLib {
 
 class LIDAREngine {
 private:
     // DATA MEMBER(S):
-    DSLib::LIDARCloud* ptrCloud;
+    InitialisationState* ptrLidarEngineInitState = nullptr;
+    DSLib::LIDARCloud lidarCloud;
 
     // PRIVATE FUNCTION MEMBER(S):
 
 public:
     // CONSTRUCTOR(S) AND DESTRUCTOR(S):
-    LIDAREngine();
+    LIDAREngine(InitialisationState& state);
     ~LIDAREngine();
 
     // PUBLIC FUNCTION MEMBER(S):
 
     // ENCAPSULATION FUNCTION MEMBER(S):
-    DSLib::LIDARCloud* getCloudAddress();
+    DSLib::LIDARCloud getCloud(){return lidarCloud;};
 };
 
 } // LIDARLib

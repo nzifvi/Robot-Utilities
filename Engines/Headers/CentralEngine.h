@@ -8,23 +8,41 @@
 #include "LIDAREngine.h"
 #include "MovementEngine.h"
 
-namespace CentralEngineLib {
+namespace EngineLib {
 
-class CentralEngine {
-private:
-    LIDARLib::LIDAREngine* ptrLidarEngine = nullptr;
-    MovementLib::MovementEngine* ptrMovementEngine = nullptr;
-    // PRIVATE FUNCTION MEMBER(S):
+    enum class MovementEngineState {
+        MOVING,
+        STOPPED,
+        SCANNING,
+    };
 
-public:
-    // CONSTRUCTOR(S) AND DESTRUCTOR(S):
-    CentralEngine();
-    ~CentralEngine();
+    enum class InitialisationState {
+        UNINITIALISED,
+        INITIALISING,
+        INITIALISED
+    };
 
-    // PUBLIC FUNCTION MEMBER(S)
+    class CentralEngine {
+    private:
+        LIDAREngine* ptrLidarEngine = nullptr;
+        MovementEngine* ptrMovementEngine = nullptr;
 
-    // ENCAPSULATION FUNCTION MEMBER(S)
-};
+        InitialisationState* ptrMovementEngineInitialisationState = new InitialisationState{InitialisationState::UNINITIALISED};
+        InitialisationState* ptrLidarEngineInitialisationState = new InitialisationState{InitialisationState::UNINITIALISED};
+
+        // PRIVATE FUNCTION MEMBER(S):
+
+    public:
+        // CONSTRUCTOR(S) AND DESTRUCTOR(S):
+        CentralEngine();
+        ~CentralEngine();
+
+        // PUBLIC FUNCTION MEMBER(S)
+
+        // ENCAPSULATION FUNCTION MEMBER(S)
+        InitialisationState checkMovementEngineInitialisationState(){return *ptrMovementEngineInitialisationState;}
+        InitialisationState checkLidarEngineInitialisationState(){return *ptrMovementEngineInitialisationState;}
+    };
 
 } // CentralEngineLib
 
