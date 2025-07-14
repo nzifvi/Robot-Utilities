@@ -57,8 +57,7 @@ namespace MathLib {
                 }
             }
             std::cout << extractedMatrix << std::endl;
-            // BELOW CAUSES SEGMENTATION FAULT
-            aaa
+            // BELOW CAUSES SEGMENTATION FAULT aaa
             /*
             laplaceExpansionExpression.insert(
                  0,
