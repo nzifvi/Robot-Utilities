@@ -20,7 +20,7 @@ namespace MathLib {
         this->rows = matrix.rows;
         this->columns = matrix.columns;
         ptrArray = new float*[rows];
-        for (int j = 0; j < columns; j++) {
+        for (int j = 0; j < rows; j++) {
             ptrArray[j] = new float[columns];
         }
 
@@ -32,7 +32,8 @@ namespace MathLib {
     }
 
     Matrix::~Matrix() {
-        for (int j = 0; j < columns; j++) {
+        std::cout << "Matrix destructor called\n";
+        for (int j = 0; j < rows; j++) {
             delete[] ptrArray[j];
         }
         delete[] ptrArray;

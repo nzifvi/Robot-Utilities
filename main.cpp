@@ -3,25 +3,26 @@
 #include "Matrix.h"
 #include "Vector.h"
 #include "DynamicArray.h"
+#include "LaplaceExpander.h"
 
 int main() {
-    DSLib::DynamicArray<int> array{};
-    for (int i = 0; i < 10; i++) {
-        array.insert(0, i);
-    }
+    MathLib::Matrix matrix(3,3);
+    matrix.set(0,0, 1);
+    matrix.set(0,1, 2);
+    matrix.set(0,2, 7);
+    matrix.set(1,0,3);
+    matrix.set(1,1,4);
+    matrix.set(1,2,12);
+    matrix.set(2,0,13);
+    matrix.set(2,1,1);
+    matrix.set(2,2,0);
 
-    for (int i = 0; i < array.size(); i++) {
-        std::cout << array.get(i) << ", ";
-    }
 
-    std::cout << std::endl;
-    array.insert(4,10);
+    std::cout << matrix << std::endl;
 
-    for (int i = 0; i < array.size(); i++) {
-        std::cout << array.get(i) << ", ";
-    }
 
-    array.remove(3);
+    MathLib::LaplaceExpander laplace(matrix);
+    laplace.performLaplaceExpansion();
 
     return 0;
 }

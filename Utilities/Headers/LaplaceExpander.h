@@ -6,6 +6,8 @@
 #define LAPLACEEXPANDER_H
 
 #include "Matrix.h"
+#include "DynamicArray.h"
+#include <vector>
 
 namespace MathLib {
 
@@ -13,25 +15,41 @@ namespace MathLib {
     private:
         // DATA MEMBER(S):
         struct LaplaceExpansionTerm {
-            Matrix* matrix;
-            int sign;
-            LaplaceExpansionTerm(Matrix& matrix, const int sign) {
-                this->matrix = &matrix;
+            Matrix matrix;
+            float sign;
+            LaplaceExpansionTerm(Matrix& matrix, const float sign): matrix(matrix) {
                 this->sign = sign;
             }
+            LaplaceExpansionTerm(): matrix(0,0) {
+                sign = 0;
+            }
+            ~LaplaceExpansionTerm() {
+
+            }
         };
-        LaplaceExpansionTerm* ptrLaplaceExpansionExpression;
-        int arraySize;
-        int arrayCapacity;
         Matrix originalMatrix;
+        Matrix* ptrCofactorsMatrix = nullptr;
+        int arraySize;
+        DSLib::DynamicArray<LaplaceExpansionTerm> laplaceExpansionExpression;
 
         // PRIVATE FUNCTION MEMBER(S):
+        void updateCofactorsMatrix(Matrix& matrix);
+        int index(const int rowNo, const int colNo);
+
     public:
-        // CONSTRUCTOR(S):
-        LaplaceExpander(Matrix& originalMatrix);
+        // CONSTRUCTOR(S) AND DESTRUCTOR(S):
+        LaplaceExpander(Matrix* originalMatrix);
+
+        LaplaceExpander(Matrix &originalMatrix);
+
         ~LaplaceExpander();
 
-        //DESTRUCTOR(S):
+        // PUBLIC FUNCTION MEMBER(S):
+        void performLaplaceExpansion();
+
+        // ENCAPSULATION FUNCTION MEMBER(S):
+        Matrix getCofactorsMatrix() { return *ptrCofactorsMatrix; }
+
     };
 
 } // MathLib

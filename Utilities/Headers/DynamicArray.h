@@ -11,7 +11,7 @@
 namespace DSLib {
 
 template<typename T> class DynamicArray {
-private:
+protected:
     // DATA MEMBER(S):
     T* ptrArray;
     int arraySize;
@@ -19,12 +19,13 @@ private:
 
     // PRIVATE FUNCTION MEMBER(S):
     void resize(const int newCapacity) {
+        std::cout << "resize" << std::endl;
         T* newArray = new T[newCapacity];
         for (int i = 0; i < arraySize; i++) {
             newArray[i] = ptrArray[i];
         }
-        arrayCapacity = newCapacity;
         ptrArray = newArray;
+        arrayCapacity = newCapacity;
     }
 
 public:
@@ -55,7 +56,7 @@ public:
     }
 
     // PUBLIC FUNCTION MEMBER(S):
-    void insert(const int index, T value) {
+    virtual void insert(const int index, T value) {
         if (index < 0) {
             throw std::invalid_argument("index cannot be negative");
         }else {
@@ -74,12 +75,28 @@ public:
         }
     }
 
-    T remove(const int index) {
+    virtual T remove(const int index) {
         if (index < 0 || index >= arraySize) {
             throw std::out_of_range("index out of range");
         }else {
-            throw case_not_yet_implemented();
+            T toReturn = ptrArray[index];
+            for (int i = index; i < arraySize; i++) {
+                ptrArray[i] = ptrArray[i + 1];
+            }
+            arraySize--;
+            if (arraySize == arrayCapacity / 4) {
+                resize(arrayCapacity/4);
+            }
+            return toReturn;
         }
+    }
+
+    void clear() {
+        delete[] ptrArray;
+        resize(0);
+        arraySize = 0;
+        arrayCapacity = 0;
+
     }
 
     // ENCAPSULATION METHOD(S):
@@ -99,6 +116,9 @@ public:
     }
     int size() {return this->arraySize;}
     int capacity() {return this->arrayCapacity;}
+    DynamicArray<T> clone() {
+        return DynamicArray<T>(ptrArray);
+    }
 
 };
 
