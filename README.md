@@ -23,8 +23,45 @@ Vector is a class-type object which represents a vector of variable dimensions (
 
 Vector data members, which are rectangular components of a vector, are stored as floats to permit a high degree of accuracy.
 
+##### Vector.h Function Members
+`Vector(float x, float y, float z)`
+- Constructor which allows for a Vector class-type object to be initialised
+
+`Vector(Vector other)`
+- Constructor which allows for a deep copy of another Vector class-type object to be initialised. Post copy, both Vector class-type objects will have independent memory for their data members.
+
+`float magnitude()`
+- Public function member which returns the magnitude of a Vector class-type object, given that all data members have been initialised.
+
+`float directionX()`
+- Public function member which returns the angle between the vector and the x-axis.
+
+`float directionY()`
+- Public function member which returns the angle between the vector and the y-axis.
+
+`float directionZ()`
+- Public function member which returns the angle between the vector and the z-axis.
+
+`float getXComponent()`
+- Encapsulation function member returning the assigned x rectangular component that was assigned.
+
+`float getYComponent()`
+- Encapsulation function member returning the assigned y rectangular component that was assigned.
+
+`float getZComponent()`
+- Encapsulation function member returning the assigned z rectangular component that was assigned.
+
+#### Vector.h Auxiliary Functions
+
+`angleBetween(Vector& v1, Vector v2&)`
+- Auxiliary function which returns the angle between 2 vectors given as arguments in the function call.
 
 #### Matrix.h
+Matrix is a class-type object which provides a program representation of a Matrix. It can be assigned a variable amount of rows and columns. 
+
+No default constructor exists. The number of rows and columns to assign a Matrix class-type object must be given as arguments during initialisation.
+
+#### Matrix.h function members
 
 #### LaplaceExpander.h
 
