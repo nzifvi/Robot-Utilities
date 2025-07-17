@@ -4,8 +4,10 @@
 
 Robot Utilities is a C++ library which provides multiple assets, and sublibraries, with the intention to provide planned motion of a chassis which uses wheels as it's method of locomotion.
 
-## IMPORTANT NOTICE
-Robot Utilities is intended to work using a Rasberry Pi with multiple cores (at least 4). Furthermore, it utilises pigpio library to set voltages through pins and communicate with another microcontroller which actually drives the motors of a given chassis.
+## IMPORTANT NOTICES
+Robot Utilities is STRICTLY for use with a Rasberry Pi with multiple cores (at least 4). Furthermore, it utilises pigpio library to set voltages through pins and communicate with another microcontroller which actually drives the motors of a given chassis.
+
+Furthermore, a sensor which has some method of computing 3D points in space is required.
 
 ## Features
 
