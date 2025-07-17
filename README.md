@@ -18,9 +18,11 @@ MathLib uses:
 - MathLib is utilised by the [MovementEngine](####MovementEngine.h) class-type object to compute the shortest weighted path whilst accounting for clearance.
 - MathLib is utilised by the [LIDAREngine](####LIDAREngine.h) class-type object to categorise points into multiple types: enabling planned motion for the chassis.
 
-
-
 #### Vector.h
+Vector is a class-type object which represents a vector of variable dimensions (1xN). By default, the dimensions of a Vector class-type object will be 1x3. This can be modified by providing an integer argument. A typical use of this might be to create a pose vector which also stores angle data.
+
+Vector data members, which are rectangular components of a vector, are stored as floats to permit a high degree of accuracy.
+
 
 #### Matrix.h
 
