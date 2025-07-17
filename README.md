@@ -13,6 +13,7 @@ The MathLib library is a sublirary of Robot Utilities library. It's purpose is t
 
 MathLib uses:
 - MathLib is utilised by the [MovementEngine](####MovementEngine.h) class-type object to compute the shortest weighted path whilst accounting for clearance.
+- MathLib is utilised by the [LIDAREngine](####LIDAREngine.h) class-type object to categorise points into multiple types: enabling planned motion for the chassis.
 
 
 
