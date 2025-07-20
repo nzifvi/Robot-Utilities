@@ -14,20 +14,20 @@ namespace EngineLib {
 class LIDAREngine {
 private:
     // DATA MEMBER(S):
-    InitialisationState* ptrLidarEngineInitState = nullptr;
-    DSLib::LIDARCloud lidarCloud;
+    //InitialisationState* ptrLidarEngineInitState = nullptr;
+    //DSLib::LIDARCloud lidarCloud;
 
     // PRIVATE FUNCTION MEMBER(S):
 
 public:
     // CONSTRUCTOR(S) AND DESTRUCTOR(S):
-    LIDAREngine(InitialisationState& state);
-    ~LIDAREngine();
+    //LIDAREngine(InitialisationState& state);
+    //~LIDAREngine();
 
     // PUBLIC FUNCTION MEMBER(S):
 
     // ENCAPSULATION FUNCTION MEMBER(S):
-    DSLib::LIDARCloud getCloud(){return lidarCloud;};
+    //DSLib::LIDARCloud getCloud(){return lidarCloud;};
 };
 
 } // LIDARLib

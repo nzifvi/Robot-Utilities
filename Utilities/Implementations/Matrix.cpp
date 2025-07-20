@@ -7,39 +7,41 @@
 namespace MathLib {
 
     // CONSTRUCTOR(S) AND DESTRUCTOR(S):
-    Matrix::Matrix(const int rowSize, const int columnSize) {
-        this->rows = rowSize;
-        this->columns = columnSize;
-        ptrArray = new float*[rows];
-        for (int j = 0; j < columns; j++) {
-            ptrArray[j] = new float[columns];
-        }
+    Matrix::Matrix(const int rowSize, const int columnSize):
+    ptrArray(new float[rowSize * columnSize]),
+    rows(rowSize),
+    columns(columnSize){
+
     }
 
-    Matrix::Matrix(Matrix& matrix) {
-        this->rows = matrix.rows;
-        this->columns = matrix.columns;
-        ptrArray = new float*[rows];
-        for (int j = 0; j < rows; j++) {
-            ptrArray[j] = new float[columns];
-        }
-
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {
-                ptrArray[i][j] = matrix.ptrArray[i][j];
+    Matrix::Matrix(const Matrix& other): // DEEP COPY
+    ptrArray(new float[other.rows * other.columns]),
+    rows(other.rows),
+    columns(other.columns){
+        for (int rowIndex = 0; rowIndex < other.rows; rowIndex++) {
+            for (int columnIndex = 0; columnIndex < other.columns; columnIndex++) {
+                ptrArray[index(rowIndex, columnIndex)] = other.ptrArray[index(rowIndex, columnIndex)];
             }
         }
     }
 
+    Matrix::Matrix(Matrix&& other): // DEEP MOVE
+    rows(other.rows),
+    columns(other.columns),
+    ptrArray(std::move(other.ptrArray)){
+        other.ptrArray = nullptr;
+    }
+
     Matrix::~Matrix() {
-        std::cout << "Matrix destructor called\n";
-        for (int j = 0; j < rows; j++) {
-            delete[] ptrArray[j];
+        if (ptrArray) {
+            delete[] ptrArray;
         }
-        delete[] ptrArray;
     }
 
     // PRIVATE FUNCTION MEMBER(S):
+    int Matrix::index(const int row, const int col) const {
+        return row*columns + col;
+    }
 
     // PUBLIC FUNCTION MEMBER(S):
 
@@ -92,7 +94,7 @@ namespace MathLib {
         return result;
     }
 
-    ::std::ostream& operator<<(std::ostream& os, Matrix& m) {
+    ::std::ostream& operator<<(std::ostream& os, const Matrix& m) {
         for (int row = 0; row < m.getRowAmount(); row++) {
             os << "| ";
             for (int col = 0; col < m.getColumnAmount(); col++) {
@@ -121,6 +123,37 @@ namespace MathLib {
                 throw case_not_yet_implemented(); // IMPLEMENT LAPLACE EXPANSION FUNCTION TO RECURSIVELY REDUCE TO A SUM OF 2D MATRIX DETERMINANTS
             }
         }
+    }
+
+    Matrix& Matrix::operator=(Matrix&& other) {
+        if (this != &other) {
+            delete[] ptrArray;
+
+            ptrArray = other.ptrArray;
+            rows = other.rows;
+            columns = other.columns;
+
+            other.ptrArray = nullptr;
+            other.rows = 0;
+            other.columns = 0;
+        }
+        return *this;
+    }
+
+    Matrix& Matrix::operator=(const Matrix& other) {
+        if (this != &other) {
+            delete[] ptrArray;
+
+            rows = other.rows;
+            columns = other.columns;
+            ptrArray = new float[rows*columns];
+            for (int rowIndex = 0; rowIndex < rows; rowIndex++) {
+                for (int columnIndex = 0; columnIndex < columns; columnIndex++) {
+                    ptrArray[index(rowIndex, columnIndex)] = other.get(rowIndex, columnIndex);
+                }
+            }
+        }
+        return *this;
     }
 
 } // MathLib

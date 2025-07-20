@@ -5,41 +5,50 @@ namespace MathLib {
     // VECTOR::VECTOR FUNCTION MEMBER DEFINITIONS |------------------------------------------------------------------------
 
     //  ->  VECTOR::VECTOR CONSTRUCTOR(S) AND DESTRUCTOR(S):
-    MathLib::Vector::Vector(const float x, const float y, const float z) {
-        this->xComponent = x;
-        this->yComponent = y;
-        this->zComponent = z;
+    Vector::Vector(const float x, const float y, const float z):
+    xComponent(x),
+    yComponent(y),
+    zComponent(z){
+
     }
+
+    Vector::Vector(const Vector& other):
+    xComponent(other.xComponent),
+    yComponent(other.yComponent),
+    zComponent(other.zComponent){
+
+    }
+
 
     //  ->  VECTOR::VECTOR PUBLIC FUNCTION MEMBER(S):
 
-    float MathLib::Vector::magnitude() {
+    float Vector::magnitude() const {
         return sqrtf(xComponent*xComponent+yComponent*yComponent+zComponent*zComponent);
     }
 
-    float MathLib::Vector::directionX() {
+    float Vector::directionX() const {
         return xComponent / magnitude();
     }
 
-    float MathLib::Vector::directionY() {
+    float Vector::directionY() const {
         return yComponent / magnitude();
     }
 
-    float MathLib::Vector::directionZ() {
+    float Vector::directionZ() const {
         return zComponent / magnitude();
     }
 
     //  ->  VECTOR::VECTOR ENCAPSULATION FUNCTION MEMBER(S):
 
-    float MathLib::Vector::getXComponent() {
+    float Vector::getXComponent() const {
         return this->xComponent;
     }
 
-    float MathLib::Vector::getYComponent() {
+    float Vector::getYComponent() const {
         return this->yComponent;
     }
 
-    float MathLib::Vector::getZComponent() {
+    float Vector::getZComponent() const {
         return this->zComponent;
     }
 

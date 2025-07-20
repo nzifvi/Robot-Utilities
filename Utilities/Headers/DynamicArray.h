@@ -12,8 +12,10 @@ namespace DSLib {
 
 template<typename T> class DynamicArray {
 protected:
+    // REDO IMPLEMENTATION TO ACCOUNT FOR MOVE SEMANTICS.
+    
     // DATA MEMBER(S):
-    T* ptrArray;
+    T* ptrArray = nullptr;
     int arraySize;
     int arrayCapacity;
 
@@ -30,29 +32,42 @@ protected:
 
 public:
     // CONSTRUCTOR(S) AND DESTRUCTOR(S):
-    DynamicArray() {
-        ptrArray = new T[0];
-        arraySize = 0;
-        arrayCapacity = 0;
+    DynamicArray():
+    ptrArray(new T[0]),
+    arraySize(0),
+    arrayCapacity(0){
+
     }
 
-    DynamicArray(const DynamicArray<T>& otherDynamicArray) {
-        ptrArray = new T[otherDynamicArray.size];
-        arraySize = otherDynamicArray.size;
-        arrayCapacity = otherDynamicArray.capacity;
+    DynamicArray(const int size):
+    ptrArray(new T[size]),
+    arraySize(size),
+    arrayCapacity(size){
+
+    }
+
+    DynamicArray(const DynamicArray& other): // DEEP COPY CONSTRUCTOR
+    ptrArray(new T[other.capacity]),
+    arraySize(other.arraySize),
+    arrayCapacity(other.arrayCapacity){
         for (int i = 0; i < arraySize; i++) {
-            ptrArray[i] = otherDynamicArray.ptrArray[i];
+            ptrArray[i] = other.ptrArray[i];
         }
     }
 
-    DynamicArray(const int capacity) {
-        ptrArray = new T[capacity];
-        this->arrayCapacity = capacity;
-        arraySize = 0;
+    DynamicArray(DynamicArray&& other): // MOVE CONSTRUCTOR
+    ptrArray(std::move(other.ptrArray)),
+    arraySize(other.arraySize),
+    arrayCapacity(other.arrayCapacity){
+        other.ptrArray = nullptr;
+        other.arraySize = 0;
+        other.arrayCapacity = 0;
     }
 
     ~DynamicArray() {
-        delete[] ptrArray;
+        if (ptrArray) {
+            delete[] ptrArray;
+        }
     }
 
     // PUBLIC FUNCTION MEMBER(S):
@@ -100,9 +115,9 @@ public:
     }
 
     // ENCAPSULATION METHOD(S):
-    T get(const int index) {
+    T& get(const int index) {
         if (index < 0 || index >= arraySize) {
-            throw std::out_of_range("");
+            throw std::out_of_range("Matrix.get() function member call resulted in an attempt to access an out of bounds index");
         }else {
             return ptrArray[index];
         }

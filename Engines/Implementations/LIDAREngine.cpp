@@ -6,15 +6,15 @@
 
 namespace EngineLib {
     // CONSTRUCTOR(S) AND DESTRUCTOR(S):
-    LIDAREngine::LIDAREngine(InitialisationState& state) {
-        lidarCloud = DSLib::LIDARCloud();
-        ptrLidarEngineInitState = &state;
-        *ptrLidarEngineInitState = InitialisationState{InitialisationState::INITIALISING};
-    }
+    //LIDAREngine::LIDAREngine(InitialisationState& state) {
+    //    lidarCloud = DSLib::LIDARCloud();
+    //    ptrLidarEngineInitState = &state;
+    //    *ptrLidarEngineInitState = InitialisationState{InitialisationState::INITIALISING};
+    //}
 
-    LIDAREngine::~LIDAREngine() {
+    //LIDAREngine::~LIDAREngine() {
 
-    }
+    //}
 
 
     // PRIVATE FUNCTION MEMBER(S):

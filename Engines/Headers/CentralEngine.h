@@ -24,24 +24,24 @@ namespace EngineLib {
 
     class CentralEngine {
     private:
-        LIDAREngine* ptrLidarEngine = nullptr;
-        MovementEngine* ptrMovementEngine = nullptr;
+        //LIDAREngine* ptrLidarEngine = nullptr;
+        //MovementEngine* ptrMovementEngine = nullptr;
 
-        InitialisationState* ptrMovementEngineInitialisationState = new InitialisationState{InitialisationState::UNINITIALISED};
-        InitialisationState* ptrLidarEngineInitialisationState = new InitialisationState{InitialisationState::UNINITIALISED};
+        //InitialisationState* ptrMovementEngineInitialisationState = new InitialisationState{InitialisationState::UNINITIALISED};
+        //InitialisationState* ptrLidarEngineInitialisationState = new InitialisationState{InitialisationState::UNINITIALISED};
 
         // PRIVATE FUNCTION MEMBER(S):
 
     public:
         // CONSTRUCTOR(S) AND DESTRUCTOR(S):
-        CentralEngine();
-        ~CentralEngine();
+        //CentralEngine();
+        //~CentralEngine();
 
         // PUBLIC FUNCTION MEMBER(S)
 
         // ENCAPSULATION FUNCTION MEMBER(S)
-        InitialisationState checkMovementEngineInitialisationState(){return *ptrMovementEngineInitialisationState;}
-        InitialisationState checkLidarEngineInitialisationState(){return *ptrMovementEngineInitialisationState;}
+        //InitialisationState checkMovementEngineInitialisationState(){return *ptrMovementEngineInitialisationState;}
+        //InitialisationState checkLidarEngineInitialisationState(){return *ptrMovementEngineInitialisationState;}
     };
 
 } // CentralEngineLib

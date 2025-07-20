@@ -13,15 +13,15 @@ namespace EngineLib {
 class MovementEngine {
 private:
     // DATA MEMBER(S):
-    InitialisationState* ptrMovementEngineInitState = nullptr;
-    DSLib::LIDARCloud addressCloud;
+    //InitialisationState* ptrMovementEngineInitState = nullptr;
+    //DSLib::LIDARCloud addressCloud;
 
     // PRIVATE FUNCTION MEMBER(S):
 
 public:
     // CONSTRUCTOR(S) AND DESTRUCTOR(S):
-    MovementEngine(const DSLib::LIDARCloud& addressCloud, InitialisationState& state);
-    ~MovementEngine();
+    //MovementEngine(const DSLib::LIDARCloud& addressCloud, InitialisationState& state);
+    //~MovementEngine();
 
     // PUBLIC FUNCTION MEMBER(S):
 

@@ -6,11 +6,11 @@
 
 namespace EngineLib {
     // CONSTRUCTOR(S) AND DESTRUCTOR(S)
-    MovementEngine::MovementEngine(const DSLib::LIDARCloud& addressCloud, InitialisationState& state): addressCloud() {
-        this->addressCloud = addressCloud;
-        ptrMovementEngineInitState = &state;
-        *ptrMovementEngineInitState = InitialisationState{InitialisationState::INITIALISING};
-    }
+    //MovementEngine::MovementEngine(const DSLib::LIDARCloud& addressCloud, InitialisationState& state): addressCloud() {
+    //    this->addressCloud = addressCloud;
+   //     ptrMovementEngineInitState = &state;
+   //     *ptrMovementEngineInitState = InitialisationState{InitialisationState::INITIALISING};
+   // }
 
     //MovementEngine::~MovementEngine() {
 

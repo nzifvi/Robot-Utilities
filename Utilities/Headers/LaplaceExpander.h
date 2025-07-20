@@ -8,39 +8,31 @@
 #include "Matrix.h"
 #include "DynamicArray.h"
 #include <vector>
+#include <queue>
 
 namespace MathLib {
+
+    struct LaplaceExpansionTerm {
+        Matrix term;
+        float sign;
+        LaplaceExpansionTerm(Matrix&& matrix, const float sign):
+        term(matrix),
+        sign(sign){}
+    };
 
     class LaplaceExpander {
     private:
         // DATA MEMBER(S):
-        struct LaplaceExpansionTerm {
-            Matrix matrix;
-            float sign;
-            LaplaceExpansionTerm(Matrix& matrix, const float sign): matrix(matrix) {
-                this->sign = sign;
-            }
-            LaplaceExpansionTerm(): matrix(0,0) {
-                sign = 0;
-            }
-            ~LaplaceExpansionTerm() {
-
-            }
-        };
         Matrix originalMatrix;
-        Matrix* ptrCofactorsMatrix = nullptr;
-        int arraySize;
-        DSLib::DynamicArray<LaplaceExpansionTerm> laplaceExpansionExpression;
+        Matrix cofactorsMatrix;
+        //DSLib::DynamicArray<LaplaceExpansionTerm> laplaceExpansionArray;
+        std::vector<LaplaceExpansionTerm> laplaceExpansionVec;
 
         // PRIVATE FUNCTION MEMBER(S):
-        void updateCofactorsMatrix(Matrix& matrix);
-        int index(const int rowNo, const int colNo);
 
     public:
         // CONSTRUCTOR(S) AND DESTRUCTOR(S):
-        LaplaceExpander(Matrix* originalMatrix);
-
-        LaplaceExpander(Matrix &originalMatrix);
+        LaplaceExpander(const Matrix& originalMatrix);
 
         ~LaplaceExpander();
 
@@ -48,7 +40,10 @@ namespace MathLib {
         void performLaplaceExpansion();
 
         // ENCAPSULATION FUNCTION MEMBER(S):
-        Matrix getCofactorsMatrix() { return *ptrCofactorsMatrix; }
+        Matrix& getCofactorsMatrixREFERENCE() {return cofactorsMatrix;}
+        Matrix& getLaplaceTerm(const int index) {
+            return laplaceExpansionVec[index].term;
+        }
 
     };
 

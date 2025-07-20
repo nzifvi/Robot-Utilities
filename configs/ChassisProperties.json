@@ -1,0 +1,8 @@
+{
+  "robotMass": 0,
+  "robotWidth": 0,
+  "robotHeight": 0,
+  "robotLength": 0,
+  "massUnit": "kg",
+  "distanceUnit": "cm"
+}

@@ -17,17 +17,18 @@ namespace MathLib {
     public:
         // CONSTRUCTOR(S) AND DESTRUCTOR(S):
         Vector(const float x, const float y, const float z);
+        Vector(const Vector& other);
 
         // PUBLIC FUNCTION MEMBER(S):
-        float magnitude();
-        float directionX();
-        float directionY();
-        float directionZ();
+        float magnitude() const;
+        float directionX() const;
+        float directionY() const;
+        float directionZ() const;
 
         // ENCAPSULATION FUNCTION MEMBER(S):
-        float getXComponent();
-        float getYComponent();
-        float getZComponent();
+        float getXComponent() const;
+        float getYComponent() const;
+        float getZComponent() const;
     };
     inline Vector operator+(Vector& v1, Vector& v2) {
         return Vector(
