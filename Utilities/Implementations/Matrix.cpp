@@ -105,26 +105,6 @@ namespace MathLib {
         return os;
     }
 
-    void transpose(Matrix& m) {
-        for (int i = 0; i < m.getRowAmount(); i++) {
-            for (int j = 0; j < m.getColumnAmount(); j++) {
-                m.set(j, i, m.get(i, j));
-            }
-        }
-    }
-
-    float determinant(Matrix& m) {
-        if (m.getRowAmount() != m.getColumnAmount() || m.getRowAmount() == 0 || m.getRowAmount() == 1) {
-            throw invalid_dimensions();
-        }else {
-            if (m.getRowAmount() == 2 && m.getColumnAmount() == 2) {
-                return m.get(0,0) * m.get(1,1) - m.get(0,1) * m.get(1,0);
-            }else {
-                throw case_not_yet_implemented(); // IMPLEMENT LAPLACE EXPANSION FUNCTION TO RECURSIVELY REDUCE TO A SUM OF 2D MATRIX DETERMINANTS
-            }
-        }
-    }
-
     Matrix& Matrix::operator=(Matrix&& other) {
         if (this != &other) {
             delete[] ptrArray;

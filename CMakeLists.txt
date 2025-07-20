@@ -11,6 +11,8 @@ file(GLOB_RECURSE SOURCES
 
 add_executable(
         RobotUtilities ${SOURCES}
+        "Utilities/Headers/MathLibAuxiliaryFunctions.h"
+        Utilities/Implementations/MathLibAuxiliaryFunctions.cpp
 )
 
 target_include_directories(RobotUtilities PRIVATE

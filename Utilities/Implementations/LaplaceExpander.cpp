@@ -29,7 +29,7 @@ namespace MathLib {
 
     // PUBLIC FUNCTION MEMBER(S):
     void LaplaceExpander::performLaplaceExpansion() {
-        // ASSUMING FIRST ROW (1 (0 in array index)) IS ALWAYS CHOSEN
+        // ASSUMPTION: FIRST ROW (1 (0 in array index)) IS ALWAYS CHOSEN
 
         for (int excludeColNo = 0; excludeColNo < originalMatrix.getColumnAmount(); excludeColNo++) {
             std::queue<float> extractedElements;

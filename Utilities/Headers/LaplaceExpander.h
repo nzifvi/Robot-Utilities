@@ -41,10 +41,23 @@ namespace MathLib {
 
         // ENCAPSULATION FUNCTION MEMBER(S):
         Matrix& getCofactorsMatrixREFERENCE() {return cofactorsMatrix;}
-        Matrix& getLaplaceTerm(const int index) {
-            return laplaceExpansionVec[index].term;
+        Matrix& getLaplaceTermMatrix(const int index) {
+            if (index < 0 || index > laplaceExpansionVec.size()) {
+                throw std::out_of_range("Attempt to get matrix in laplace expansion vector resulted in an attempt to access an out of bounds index");
+            }else {
+                return laplaceExpansionVec[index].term;
+            }
         }
-
+        float getLaplaceTermSign(const int index) {
+            if (index < 0 ||index > laplaceExpansionVec.size()) {
+                throw std::out_of_range("Attempt to get sign in laplace expansion vector resulted in an attempt to access an out of bounds index");
+            }else {
+                return laplaceExpansionVec[index].sign;
+            }
+        }
+        int getNumberOfLaplaceExpansionTerms() {
+            return laplaceExpansionVec.size();
+        }
     };
 
 } // MathLib

@@ -303,6 +303,30 @@ Utilities/Implementations/LaplaceExpander.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/Utilities/Implementations/LaplaceExpander.cpp.s
 .PHONY : Utilities/Implementations/LaplaceExpander.cpp.s
 
+Utilities/Implementations/MathLibAuxiliaryFunctions.obj: Utilities/Implementations/MathLibAuxiliaryFunctions.cpp.obj
+.PHONY : Utilities/Implementations/MathLibAuxiliaryFunctions.obj
+
+# target to build an object file
+Utilities/Implementations/MathLibAuxiliaryFunctions.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/Utilities/Implementations/MathLibAuxiliaryFunctions.cpp.obj
+.PHONY : Utilities/Implementations/MathLibAuxiliaryFunctions.cpp.obj
+
+Utilities/Implementations/MathLibAuxiliaryFunctions.i: Utilities/Implementations/MathLibAuxiliaryFunctions.cpp.i
+.PHONY : Utilities/Implementations/MathLibAuxiliaryFunctions.i
+
+# target to preprocess a source file
+Utilities/Implementations/MathLibAuxiliaryFunctions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/Utilities/Implementations/MathLibAuxiliaryFunctions.cpp.i
+.PHONY : Utilities/Implementations/MathLibAuxiliaryFunctions.cpp.i
+
+Utilities/Implementations/MathLibAuxiliaryFunctions.s: Utilities/Implementations/MathLibAuxiliaryFunctions.cpp.s
+.PHONY : Utilities/Implementations/MathLibAuxiliaryFunctions.s
+
+# target to generate assembly for a file
+Utilities/Implementations/MathLibAuxiliaryFunctions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RobotUtilities.dir\build.make CMakeFiles/RobotUtilities.dir/Utilities/Implementations/MathLibAuxiliaryFunctions.cpp.s
+.PHONY : Utilities/Implementations/MathLibAuxiliaryFunctions.cpp.s
+
 Utilities/Implementations/Matrix.obj: Utilities/Implementations/Matrix.cpp.obj
 .PHONY : Utilities/Implementations/Matrix.obj
 
@@ -406,6 +430,9 @@ help:
 	@echo ... Utilities/Implementations/LaplaceExpander.obj
 	@echo ... Utilities/Implementations/LaplaceExpander.i
 	@echo ... Utilities/Implementations/LaplaceExpander.s
+	@echo ... Utilities/Implementations/MathLibAuxiliaryFunctions.obj
+	@echo ... Utilities/Implementations/MathLibAuxiliaryFunctions.i
+	@echo ... Utilities/Implementations/MathLibAuxiliaryFunctions.s
 	@echo ... Utilities/Implementations/Matrix.obj
 	@echo ... Utilities/Implementations/Matrix.i
 	@echo ... Utilities/Implementations/Matrix.s

@@ -59,10 +59,6 @@ namespace MathLib {
     Matrix operator*(float f, Matrix& m1); // FULLY WORKS
     ::std::ostream& operator<<(std::ostream& os, const Matrix& m); // FULLY WORKS
 
-    void transpose(Matrix& m); // DOES NOT WORK, OVERWRITES
-    float determinant(Matrix& m); // FULLY WORKS
-
-
 } // MathLib
 
 #endif //MATRIX_H
